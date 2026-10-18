@@ -1,0 +1,25 @@
+{
+  "name": "archon-engine",
+  "version": "1.0.0",
+  "description": "Autonomous agent transactional 3D scene graph synthesizer with JSON-RPC batching",
+  "type": "module",
+  "main": "archon-core.js",
+  "scripts": {
+    "start": "node archon-core.js",
+    "test": "node test-agent-rpc.js"
+  },
+  "keywords": [
+    "3d-scene-graph",
+    "ai-agents",
+    "json-rpc",
+    "transactional-rollback",
+    "spatial-engine",
+    "zero-dependencies"
+  ],
+  "author": "Vo Ba Hoang Minh <minhhoang250803@gmail.com> (https://github.com/anhminhzui-dev)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhminhzui-dev/archon-engine.git"
+  }
+}
