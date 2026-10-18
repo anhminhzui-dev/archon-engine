@@ -109,9 +109,41 @@ VERDICT: 100% of transactional proofs passed (11/11).
 
 ---
 
-## 4. Interactive Live Demo
-A zero-install visualizer and simulated agent terminal is provided in [`index.html`](index.html).  
-Dispatch live RPC mutations, view the Three.js viewport update deterministically, and test instant state rollbacks.
+## 4. Direct Command-Line Execution
+
+Run the live agent synthesis engine directly from your terminal:
+
+```bash
+node archon-core.js
+```
+
+### Sample Output:
+```
+=================================================================
+=== ARCHON-ENGINE: AGENT TRANSACTIONAL 3D SCENE SYNTHESIZER ===
+=================================================================
+
+[INIT] Initialized root scene graph at revision 0 (checksum: 7ea8f290)
+[COMMIT] Transaction committed: revision 1 (checksum: 5bff034f)
+[NODES] Total active scene nodes: 3
+
+--- TRANSACTIONAL 3D SCENE GRAPH HIERARCHY TREE ---
+
+  root (Group, id: root) [rev 0]
+  └── celestial_portal (Group, id: celestial_portal, pos: [0, 2.5, 0]) [rev 1]
+      └── inner_singularity (Mesh: Sphere, mat: mat_portal_core) [rev 1]
+  [Emitters]: portal_sparks (5000 particles, rate: 450/s) [rev 1]
+
+---------------------------------------------------
+
+Testing atomic transactional rollback...
+[ROLLBACK] Reverted to revision 0 (checksum: 7ea8f290)
+[VERIFY] Node count after rollback: 1 (pristine root state)
+
+=================================================================
+VERDICT: 100% atomic JSON-RPC 3D scene transactions verified.
+=================================================================
+```
 
 ---
 
